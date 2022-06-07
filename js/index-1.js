@@ -5,6 +5,8 @@ $(function(){
     let index = 0;
     // 定时器id
     var timer = null;
+    //节流阀
+    let flag = true;
     // 隐藏显示左右按钮
     $('.slideshow').on('mouseover',function(){
         $('.btn-left').show();
@@ -43,30 +45,40 @@ $(function(){
     });
     //左侧按钮事件
     $('.btn-left').on('click',function(){
+       if(flag){
+           flag=false;
         if(index==0){
             index=$('.slideshow-ul>li').length-1;
             $('.slideshow-ul').css({left:`-${(index*liWidth)/80}rem`});
         }
         index--;
-        $('.slideshow-ul').stop().animate({left:`-${index*liWidth/80}rem`},1000);
+        $('.slideshow-ul').stop().animate({left:`-${index*liWidth/80}rem`},1000,function(){
+            flag=true;
+        });
         if(num<=0){
             num=$('.cirlce>li').length;
         }
         num--;
         $('.cirlce>li').eq(num).addClass('back').siblings().removeClass('back');
+       }
     });
-    //向右播放函数
-    function getRight(){   
-        if(index==$('.slideshow-ul>li').length-1){
-            $('.slideshow-ul').css({left:0});
-            index=0;
+    //向右播放函数 
+    function getRight(){  
+        if(flag){
+            flag=false;
+            if(index==$('.slideshow-ul>li').length-1){
+                $('.slideshow-ul').css({left:0});
+                index=0;
+            }
+            index++; 
+            $('.slideshow-ul').stop().animate({left:`-${index*liWidth/80}rem`},1000,function(){
+                flag=true;
+            });
+            num++;
+            if(num>=$('.cirlce>li').length){
+                num=0;
+            }
+            $('.cirlce>li').eq(num).addClass('back').siblings().removeClass('back');
         }
-        index++; 
-        $('.slideshow-ul').stop().animate({left:`-${index*liWidth/80}rem`},1000);
-        num++;
-        if(num>=$('.cirlce>li').length){
-            num=0;
-        }
-        $('.cirlce>li').eq(num).addClass('back').siblings().removeClass('back');
     }
 })

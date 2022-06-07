@@ -240,8 +240,11 @@
 }
 //热门品牌
 @keyframes remove{
-    form{transform: translateX(0);}
-    to{transform: translateX(-15.5rem);}
+    0%{transform: translateX(0);}
+    // 25%{transform: translateX(-3.1rem);}
+    // 50%{transform: translateX(-6.2rem);}
+    // 75%{transform: translateX(-12.4rem);}
+    100%{transform: translateX(-15.5rem);}
 }
 .brand{
     width: 100%;
@@ -253,7 +256,7 @@
         height: 3.825rem;
         display: flex;
         justify-content: space-between;
-        animation: remove 5s infinite  ;
+        animation: remove 5s linear infinite;
         li{
             width: 3.1rem;
             height: 100%;

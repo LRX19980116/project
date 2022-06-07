@@ -10,6 +10,20 @@
 //     }
 // })
 $(function(){
+    //页面滚动事件
+    $(document).on('scroll',function(){
+        //html或者body被卷曲头部的距离
+        let head = $('html').scrollTop() || $('body').scrollTop();
+        //.header-nav距离页面顶部的距离
+        let head_nav = $('.header-nav').offset().top;
+        if(head>=head_nav){
+            // 显示隐藏的导航栏
+            $('.head-nav').css('top',0);
+        }else{
+            // 显示初始化的导航栏
+            $('.head-nav').css('top','-1.125rem');
+        }
+    });
     // 定义计时器id
     let timer = null;
     //定义全局缓存对象
@@ -18,8 +32,9 @@ $(function(){
     function debounceSearch(str){
         timer = setTimeout(function(){
             getDataList(str);
-        },900);
+        },300);
     }
+    // 搜索框的键盘按下事件
     $('#search').on('keyup',function(){
         //清楚计时器
         clearTimeout(timer);
@@ -35,6 +50,7 @@ $(function(){
         }
         debounceSearch(text);
     });
+    // 文本框获取焦点事件
     $('#search').on('focus',function(){
         $('#search').keyup();
     });
@@ -44,6 +60,7 @@ $(function(){
             url:'https://suggest.taobao.com/sug?q=' + str,
             dataType:'jsonp',
             success:function(res){
+                console.log(res);
                 renderList(res);
             }
         });

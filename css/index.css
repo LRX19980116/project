@@ -230,10 +230,10 @@
   box-shadow: 0.0125rem 0.0125rem 0.0875rem #aaa;
 }
 @keyframes remove {
-  form {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-15.5rem);
   }
 }
@@ -248,7 +248,7 @@
   height: 3.825rem;
   display: flex;
   justify-content: space-between;
-  animation: remove 5s infinite  ;
+  animation: remove 5s linear infinite;
 }
 .brand .brand-box li {
   width: 3.1rem;
