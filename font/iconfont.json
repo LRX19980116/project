@@ -1,0 +1,100 @@
+{
+  "id": "3431651",
+  "name": "icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6940830",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "6940831",
+      "name": "左箭头-",
+      "font_class": "zuojiantou-",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "10722472",
+      "name": "在线客服 customer service",
+      "font_class": "zaixiankefucustomerservice",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "12344791",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "26283788",
+      "name": "问题反馈",
+      "font_class": "wentifankui",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1360",
+      "name": "新浪微博",
+      "font_class": "xinlangweibo",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "77156",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "577403",
+      "name": "向右2",
+      "font_class": "xiangyou2",
+      "unicode": "e776",
+      "unicode_decimal": 59254
+    },
+    {
+      "icon_id": "666888",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "667792",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "2076288",
+      "name": " 购物车",
+      "font_class": "gouwuche",
+      "unicode": "e899",
+      "unicode_decimal": 59545
+    },
+    {
+      "icon_id": "4770728",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "5924483",
+      "name": "浏览",
+      "font_class": "liulan",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}

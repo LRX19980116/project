@@ -1,0 +1,53 @@
+.box {
+  width: 1240px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+.box .slideshow-ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.box .slideshow-ul li {
+  position: absolute;
+  transition: all 1s;
+}
+.box .cirlce {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+}
+.box .cirlce li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+  float: left;
+  margin: 5px;
+}
+.box .cirlce .backk {
+  background-color: blue;
+}
+.box .cirlce .back {
+  background-color: wheat;
+}
+.box .btn-left,
+.box .btn-right {
+  width: 50px;
+  height: 50px;
+}
+.box .btn-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -25px;
+}
+.box .btn-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -25px;
+}

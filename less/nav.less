@@ -1,0 +1,195 @@
+// 顶部导航
+.nav{ 
+    width: 100%;
+    height: .6625rem;
+    background-color: #333;
+        ul{
+            font-size: .175rem;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            // background-color: aliceblue;
+            justify-content: flex-end;//设置或检索弹性盒子元素在主轴(横轴)方向上的对齐方式
+            align-items: center;//定义flex子项在flex容器的当前行的侧轴(纵轴)方向上的对齐方式
+        }
+        span{
+            margin: 10px;
+            color: #aaa;
+        }
+        a{
+            color:aqua;
+        }
+        a:hover{
+            color: aliceblue;
+        }
+}
+.container{
+    width: 15.5rem;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;//父容器的屬性
+    position: relative;
+}
+// 头部
+.head{
+    width: 100%;
+    height: 1.65rem;
+    background-color: #fff;
+    //logo
+    .logo{
+        width: 2.5rem;
+        height: 100%;
+        padding: .325rem 0;
+        img{
+            width: 100%;
+            height: 1rem;
+        }
+    }
+}
+//当卷起部分大于等于head时显示head导航
+.head-nav{
+    width: 100%;
+    height: 1.125rem;
+    position: fixed;
+    top: -1.125rem;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    transition: all .5s;
+    box-shadow: .0125rem .0125rem .0875rem #eee;
+    .header-nav .hide{
+        position: absolute;
+        left: 0;
+        top: 1.125rem;
+    }
+    .logo{
+        width: 1.25rem;
+        height: .875rem;
+        img{
+            width: 1.25rem;
+        height: .875rem;
+        }
+    }
+}
+ // 头部导航栏
+ .header-nav{
+    display: flex;
+    flex: 1;
+    height: .4rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .2rem;
+    margin-left: .25rem;
+    a{
+        color: #333;
+    }
+    a:hover{
+        padding-bottom: .1rem;
+        border-bottom: .0125rem solid aqua;
+        color: aqua;
+    }
+    .hide{
+        width: 15.5rem;
+        height: 0;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 1.25rem;
+        box-shadow: .0125rem 0 .0625rem #aaa;
+        overflow: hidden;
+        transition: all .5s;//过度写在需要过渡的元素里
+        z-index: 20;
+        .hide-shop{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            li{
+                margin-right: .175rem;
+                a{
+                    width: 1.375rem;
+                    height: 100%;
+                    display: block;
+                    padding: .1875rem .1875rem;
+                    img{
+                       width: 1rem; 
+                       height: 1rem;
+                    }
+                    p{
+                        width: 1rem;
+                        height: .25rem;
+                        line-height: .25rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    li:hover>.hide{
+        height: 1.65rem;
+    }
+}
+// 搜索框
+.search{
+        width: 2.1875rem;
+        height: .4rem;
+        border-bottom: .0125rem solid #aaa;
+        display: flex;
+        position: relative;
+        i{
+            font-size: .25rem;
+            cursor: pointer;
+            display: block;
+        }
+        input{
+            width: 2.0625rem;
+            border: none;
+            outline: none;
+            font-size: .25rem;
+            
+        }
+        #search-hide{
+            width: 2.1875rem;
+            height: 3.125rem;
+            background-color: white;
+            border: .0125rem solid #aaa;
+            position: absolute;
+            left: 0;
+            top: .4375rem;
+            z-index: 12;
+            display: none;
+            .search-itme{
+                width: 100%;
+                height: .25rem;
+                line-height: .25rem;
+                font-size: .2rem;
+                overflow: hidden;
+                cursor: pointer;
+                margin-top: .0625rem;
+            }
+            .search-itme:hover{
+                background-color: #aaa;
+                color: blue;
+            }
+          }
+}
+.cart{
+        font-size: .3125rem;
+        position: relative;
+        // cursor: pointer;
+        i{
+            width: .25rem;
+            height: .1875rem;
+            line-height: .1875rem;
+            text-align: center;
+            font-size: 12px;
+            background-color: #ea745e;
+            color:rgb(246, 252, 252);
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: -0.07rem;
+            margin-right: -0.07rem;
+            border-radius: 50%;
+        }
+}
